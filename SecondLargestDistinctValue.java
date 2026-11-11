@@ -1,11 +1,7 @@
 public class SecondLargestDistinctValue {
-/** 
-    @param values The array of integers to search from
-    @return Returns the second largest distinct values or if second value doesn't exist it will return -1
-*/
-    public static int whatLargestDistinctValue (int[] values) {
+    public static String calculate (int[] values) {
         if (values == null || values.length < 2){
-            return -1;
+            return String.valueOf(-1);
         }
     
 
@@ -40,10 +36,10 @@ public class SecondLargestDistinctValue {
         }
 
         if (max1 == max2){
-            return -1;
+            return String.valueOf(-1);
         }
         else{
-            return max2;
+            return String.valueOf(max2);
         }
 
     }

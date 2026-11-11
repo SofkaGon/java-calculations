@@ -1,4 +1,3 @@
-import java.util.Scanner;//import library for scanner
 public class PrimeFactorsCalc {
     public static int NextPrime(int lastPrime){
         if (lastPrime == 1){
@@ -20,54 +19,51 @@ public class PrimeFactorsCalc {
         }
         return currentV;
     }
-    public static int NextPrimeDevision(int lastPrime, int N){
+    public static int NextPrimeDevision(int lastPrime, int n){
         int nextDevision = NextPrime(lastPrime);
-        while(nextDevision < N){
-            if (N % nextDevision == 0){
+        while(nextDevision < n){
+            if (n % nextDevision == 0){
                 return nextDevision;
             }
             nextDevision = NextPrime(nextDevision);
         }
-        return N;
+        return n;
     }
-    public static void main(){
-        Scanner sc = new Scanner(System.in); 
-        //System.out.println("Please enter the number");
-        int N = sc.nextInt();  
-        int OrgN = N; //original N
-        int devisionN = NextPrimeDevision(1, N);
-        if (devisionN == N && N!= 1){
-            System.out.printf("%d = %d %nDivisors: 2%nPrime", N);
-            return;
+    public static String calculate(int n){
+        int OrgN = n; //original N
+        int devisionN = NextPrimeDevision(1, n);
+
+        if (devisionN == n && n!= 1){
+           return n + "=" + n + "\nDivisors: 2\nPrime";
         }
         if (devisionN < 2){
-            System.out.printf("N must be 2 or greater ");
-            return;
+            return "n must be 2 or greater ";
         }
-        System.out.printf("%d = ", OrgN);
+        String result = OrgN + " = ";
         int devisionC = 1;
         boolean firstFactor = true;
-        while (N > 1){
+        while (n > 1){
             int powerC = 1;
-            N = N/devisionN;
-            while(N % devisionN == 0){
+            n = n/devisionN;
+            while(n % devisionN == 0){
                 powerC++;
-                N = N/devisionN;
+                n = n/devisionN;
             }
             if (firstFactor == false){
-                System.out.printf(" x ");
+                result = result + " x ";
             }
             if (powerC == 1){
-                System.out.printf("%d", devisionN);
+                result = result + devisionN;
             }
             else{
-                System.out.printf("%d^%d", devisionN, powerC);
+                result = result + devisionN + "^" + powerC;
             }
             firstFactor = false;
-            devisionN = NextPrimeDevision(devisionN, N);
+            devisionN = NextPrimeDevision(devisionN, n);
             devisionC = devisionC * (powerC + 1);
         }
-        System.out.printf("%nDivisors: %d %nNot prime", devisionC);
-        return;
+        result = result + "\nDivisors:" + devisionC;
+        result = result + "\nNot prime";
+        return result;
     }
 }

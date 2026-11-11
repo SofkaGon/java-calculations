@@ -1,41 +1,30 @@
-import java.util.Scanner;
 
 public class LargestSumOfTwoConsecutiveNumbers {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        //prints a question and accepts an integer input from the user
-        System.out.print("Enter amount of numbers minimum 2: ");
-        int n = sc.nextInt();
-        System.out.print("Enter first value: ");
-        int a = sc.nextInt();
-        System.out.print("Enter second value: ");
-        int b = sc.nextInt();
+    public static String calculate(int[] numbers) {//use array for multiple inputs, instead of looping next input
 
-        int x = 2;
-        int max = a + b;
-        int maxa = a;
-        int maxb = b;
+        int n = numbers.length;
+        int x = 1;
+        int max = numbers[0] + numbers[1] ;
+        int maxa = numbers[0];
+        int maxb = numbers[1];
         int sum = 0;
+        
+        if (n < 2){
+            return "Please enter at least 2 numbers";
+        }
 
-        while (x < n){
-            System.out.print("Enter next value: ");
-            int c = sc.nextInt();
-
-            sum = b + c;
+        while (x < n - 1){
+            sum = numbers[x] + numbers[x + 1];//x is index of the array
 
             if (sum > max){
                 max = sum;
-                maxa = b;
-                maxb = c;
+                maxa = numbers[x];
+                maxb = numbers[x + 1];
             }
-
-            b = c;
             x++;
         }
 
-        System.out.println("max " + max + " from pair " + maxa + " + " + maxb);
+        return "max " + max + " from pair " + maxa + " + " + maxb;
 
-
-        sc.close();
     }
 }

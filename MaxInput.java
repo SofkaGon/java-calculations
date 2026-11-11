@@ -1,45 +1,28 @@
-//Name:Sofiia Gontar
-//Question #3 Maximum of multiple inputs chechs for which number is the highest and ouputs it at  the end
-import java.util.Scanner;
-
 public class MaxInput {
-       public static void main(){
-        Scanner sc = new Scanner(System.in);
 
-        boolean end = false;
+    public static String calculate(double[] numbers) {
+
         double number = 0;
         double max = number;
         int nCounter = 0;
 
-        while (end == false){
-        //prints a question and accepts an integer input from the user
-        System.out.println("Enter numbers one at a time. Type end to finish ");
-        String a = sc.nextLine();
-        String n = a.toLowerCase();
-        if (n.equals("end")) {
-         end = true;
+        for (int c = 0; c < numbers.length; c++) {
 
-         //checks for input that matches, negative sign, decimals, or digits
-        } else if (n.matches("^-?\\d+(\\.\\d*)?$")){
-            number = Double.parseDouble(n);
-            nCounter ++;
-        }
-        else{
-            System.out.printf("%s is not a number or end -ignore", n );
+            number = numbers[c];
+            nCounter++;
+
+            if (number > max || nCounter == 1) {
+                max = number;
+            }
         }
 
-        if (number > max){
-            max = number;
-        }       
+        if (nCounter == 0) {
+            return "No numbers were entered";
         }
-
-        if (nCounter == 0){
-            System.out.println("No numbers were entered");
+        else {
+            return String.format(java.util.Locale.US,
+                "Numbers entered: %d%nMaximum: %.2f",
+                nCounter, max);
         }
-        else{
-            System.out.printf("Numbers entered: %d %nMaximum : %.2f", nCounter, max);
-        }
-        sc.close();
-
     }
 }

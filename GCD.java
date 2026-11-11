@@ -1,12 +1,5 @@
-import java.util.Scanner;
-
 public class GCD {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter first value: ");
-        int a = sc.nextInt();
-        System.out.print("Enter second value: ");
-        int b = sc.nextInt();
+    public static String calculate(int a , int b) {
 
         int value1 = a;
         int value2 = b;
@@ -18,19 +11,14 @@ public class GCD {
         }
 
         int d = value2;
-        int GCD = d;
 
-        while (d > 0) {
+        while (value2 > 0) {
             d = value1 % value2;
-            if (d < GCD && d > 0){
-                GCD = d;
-            }
-
+            
             value1 = value2;
             value2 = d;
         }
-        System.out.println(GCD);
-        sc.close();
+        return String.valueOf(value1);
 
         }
 

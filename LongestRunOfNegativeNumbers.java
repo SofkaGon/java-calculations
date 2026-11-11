@@ -1,41 +1,35 @@
-import java.util.Scanner;
-
 public class LongestRunOfNegativeNumbers {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        //prints a question and accepts an integer input from the user
-        System.out.print("Enter amount of numbers: ");
-        int n = sc.nextInt();
+    public static String calculate(int[] numbers) {
+        int n = numbers.length;
 
-        int c = 1;
+        if (n == 0){
+            return "Please enter at least one number";
+        } 
+
+        int c = 0;
         int lenght = 0;
         int b = lenght;
 
-        while (c <= n) {
-            System.out.print("Enter first value: ");
-            int a = sc.nextInt();
+        while (c < n) {
 
-            if (a > 0){
-                if (lenght > b){
+            if (numbers[c] < 0){
+                lenght ++;
+            }
+            else{
+                if ( lenght > b){
                     b = lenght;
                 }
                 lenght = 0;
             }
             
             c++;
-            lenght++;
         }
 
         if (lenght > b){
             b = lenght;
         }
-        if (b > 0){
-            System.out.println(b);
-        }
-        else {
-            System.out.println("0");
-        }
 
-        sc.close();
+        return "Longest run of negative numbers: " + b;
+
     }
 }

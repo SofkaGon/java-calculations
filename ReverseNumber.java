@@ -1,11 +1,5 @@
-import java.util.Scanner;
-
 public class ReverseNumber {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        //prints a question and accepts an integer input from the user
-        System.out.print("Enter a value: ");
-        int a = Integer.parseInt(sc.nextLine());
+    public static String calculate(int a) {
 
         int n = a;
         int b = 0;
@@ -16,8 +10,7 @@ public class ReverseNumber {
             c = c * 10 + b;
             n = n/10;
         }
-        System.out.println(c);
+        return "" + c;//"" to convert output displayed into string
 
-        sc.close();
     }
 }

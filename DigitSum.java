@@ -1,18 +1,11 @@
-//Name:Sofiia Gontar
-//Question #2 Digit sum until single digit, continuesly calculates the sum of the digits of the number, until the sum becomes a single digit number
-import java.util.Scanner;
-
 public class DigitSum {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        //prints a question and accepts an integer input from the user
-        System.out.print("Enter a value: ");
-        int n = Integer.parseInt(sc.nextLine());
+    public static String calculate(int n) {//we are taking string as the output and int as users input from main
 
         int sum = 0;
         int d = 0;
+        String output = "";//assign string for outputs
         if (n <= 0){
-        System.out.print("Please enter a positive whole number.");
+            return "Please enter a positive whole number.";
         }
         else {
             while (n >= 10) {
@@ -20,19 +13,20 @@ public class DigitSum {
                     d = n % 10;
                     sum = sum +d;
                     n = n/10;
-                    System.out.print(sum );
+                    output = output + sum;
                     if (n != 0){
-                    System.out.print(" -> ");
+                        output = output + " -> ";
                     }
 
                 }
                 //reasigns n to continue adding digits until single digit
                 n =sum;
                 sum =0;
+                output = output + "\n";
             }
-            System.out.printf("%n Final result: %d ", n);
+            output = output + "Final result: " + n;
         }   
-        sc.close();
+        return output;
     }
 
 }

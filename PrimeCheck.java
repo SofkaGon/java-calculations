@@ -1,33 +1,43 @@
-//Name:Sofiia Gontar
-//Question #4 Prime number check, checks if the number inputed is prime or not, and if it's not shows it's divisers
-import java.util.Scanner;
-
 public class PrimeCheck {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        //prints a question and accepts an integer input from the user
-        System.out.print("Enter number: ");
-        String a = sc.nextLine();
+    public static String calculate(String a) {
+        
         long n = 0;
         boolean valid = true;
         //checks if all characters are digits and if not rejects input as invalid
-        for(int i = 1 ; i < a.length(); i ++){
+        int start = 0;
+
+        if (a.length() > 0 && a.charAt(0) == '-'){
+            start = 1;
+        }
+
+        if(start == a.length()){
+            valid = false;
+        }
+
+        for(int i = start ; i < a.length(); i ++){
             if(!Character.isDigit(a.charAt(i))){
                 valid = false;
             }
         }
 
         if (valid == false){
-            System.out.printf("%s is not a number", a );
+           return a + " is not a number" ;
         }
-        n = Long.parseLong(a);
+
+        try{
+            n = Long.parseLong(a);
+        }
+        catch(NumberFormatException e){
+            return a + " is not a valid number";
+        }   
+
         long diviser = 2;
         boolean prime = true;
         long newValue = 0;
         long smallestDiv = n;
 
         if (n < 2){
-            System.out.println( n + " is Not Prime (prime numbers start at 2)");
+           return n + " is Not Prime (prime numbers start at 2)";
         }
         else{
             //find square root
@@ -43,21 +53,19 @@ public class PrimeCheck {
             //checking if any number aka. diviser, can divide the square root of n by any of it's factors
             while (root > diviser && prime == true){
                 newValue = n % diviser;
-                if (diviser < smallestDiv)
-                    smallestDiv = diviser;
                 if (newValue == 0 ) {
                     prime = false;
+                    smallestDiv = diviser;
                 }
                 diviser++;
             }
             if (prime == false){
-                System.out.println(n + " is Not prime (smallest divisor: " + smallestDiv + ")");
+                return n + " is Not prime (smallest divisor: " + smallestDiv + ")";
             }
         
             else {
-                System.out.println(n + " is Prime");
+              return n + " is Prime";
             }
         }
-        sc.close();
     }
 }
