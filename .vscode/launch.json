@@ -6,6 +6,209 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PrimeFactors",
+            "request": "launch",
+            "mainClass": "assignment3.PrimeFactors",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "DateDifference",
+            "request": "launch",
+            "mainClass": "assignment3.DateDifference",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "LoanSchedule",
+            "request": "launch",
+            "mainClass": "assignment3.LoanSchedule",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "BankAccount",
+            "request": "launch",
+            "mainClass": "assignment3.BankAccount",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "BaseConverter",
+            "request": "launch",
+            "mainClass": "assignment3.BaseConverter",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "BestTrade",
+            "request": "launch",
+            "mainClass": "assignment3.BestTrade",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "BestBuySellDay",
+            "request": "launch",
+            "mainClass": "assignment3.BestBuySellDay",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "DigitSum",
+            "request": "launch",
+            "mainClass": "DigitSum",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "FactorialCalc",
+            "request": "launch",
+            "mainClass": "FactorialCalc",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "PinChecker",
+            "request": "launch",
+            "mainClass": "PinChecker",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "NumberTable",
+            "request": "launch",
+            "mainClass": "NumberTable",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "CharactersForlLoops",
+            "request": "launch",
+            "mainClass": "CharactersForlLoops",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "loopsFlow",
+            "request": "launch",
+            "mainClass": "loopsFlow",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "ReadingInput",
+            "request": "launch",
+            "mainClass": "ReadingInput",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "MovieTickets",
+            "request": "launch",
+            "mainClass": "MovieTickets",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "Conditionals",
+            "request": "launch",
+            "mainClass": "Conditionals",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "Cooedinates",
+            "request": "launch",
+            "mainClass": "Cooedinates",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "DataTypes",
+            "request": "launch",
+            "mainClass": "DataTypes",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "DecimalToBinary",
+            "request": "launch",
+            "mainClass": "DecimalToBinary",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "BinaryToDecimal",
+            "request": "launch",
+            "mainClass": "BinaryToDecimal",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "Palindrome",
+            "request": "launch",
+            "mainClass": "Palindrome",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "ReverseDigits",
+            "request": "launch",
+            "mainClass": "ReverseDigits",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "DevisionReminder",
+            "request": "launch",
+            "mainClass": "DevisionReminder",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "USER",
+            "request": "launch",
+            "mainClass": "USER",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "SecondsHM",
+            "request": "launch",
+            "mainClass": "SecondsHM",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "Rectangle",
+            "request": "launch",
+            "mainClass": "Rectangle",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "ETA",
+            "request": "launch",
+            "mainClass": "ETA",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "CentCalculator",
+            "request": "launch",
+            "mainClass": "CentCalculator",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
+            "name": "Loops",
+            "request": "launch",
+            "mainClass": "Loops",
+            "projectName": "first project_4a8cdbed"
+        },
+        {
+            "type": "java",
             "name": "MaximumMultipleInput",
             "request": "launch",
             "mainClass": "MaximumMultipleInput",

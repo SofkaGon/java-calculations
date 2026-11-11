@@ -1,20 +1,19 @@
-import java.util.Scanner;
-
 public class SecondLargestDistinctValue {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        //prints a question and accepts an integer input from the user
-        System.out.print("Enter amount of numbers: ");
-        int n = sc.nextInt();
-        System.out.println("Enter the first value: ");
-        int a = sc.nextInt();
-
-        System.out.println("Enter the second value: ");
-        int b = sc.nextInt();
+/** 
+    @param values The array of integers to search from
+    @return Returns the second largest distinct values or if second value doesn't exist it will return -1
+*/
+    public static int whatLargestDistinctValue (int[] values) {
+        if (values == null || values.length < 2){
+            return -1;
+        }
+    
 
         int counter = 2;
         int max1 = 0;
         int max2 = 0;
+        int a = values[0];
+        int b = values[1];
 
         
         if (a >= b) {
@@ -26,9 +25,8 @@ public class SecondLargestDistinctValue {
             max2 = a;
         }
 
-        while (counter <= n) {
-            System.out.print("Enter the next value: ");
-            int c = sc.nextInt();
+        while (counter < values.length) {
+            int c = values[counter];
 
             if (c > max1) {
                 max2 = max1;
@@ -42,12 +40,11 @@ public class SecondLargestDistinctValue {
         }
 
         if (max1 == max2){
-            System.out.println("No second largest value");
+            return -1;
         }
         else{
-            System.out.println(max2);
+            return max2;
         }
 
-        sc.close();
     }
 }

@@ -56,6 +56,24 @@ public class Main extends Application {
         grid.add(resultLabel, 0,5);
         grid.add(resultArea, 1,5);
 
+        try{
+         switch (selectedOperation){
+               case "Second Largest Distinct Value":
+                   int num = Integer.parseInt(inputText);
+                    result = "Second Largest Distinct Value:" + SecondLargestDistinctValue.calculate//fix the intial file set up
+       //         case "Longest Increasing Run":
+        //        case "Largest Sum Of Two Consecutive Numbers":
+        //        case "Longest Run Of Negative Numbers":
+        //        case "Closest to Zero":
+        //        case "Position Of The Largest Value":
+        //        case "Multiplication Table":
+        //        case "Factorial Calculator":
+        //        case "Palindrome Number Check":
+         //       case "Reverse Number":
+         //       case "Digit Sum Until Single Digit":
+          }
+      }
+
         //seting the scene
         Scene scene = new Scene(grid, 500, 400);
         primaryStage.setScene(scene);

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ReverseNumber {
-         public static void main() {
+    public static void main() {
         Scanner sc = new Scanner(System.in);
         //prints a question and accepts an integer input from the user
         System.out.print("Enter a value: ");

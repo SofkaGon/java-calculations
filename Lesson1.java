@@ -13,6 +13,13 @@ class Lesson1{
 
         System.out.print("Hi\\Bye");
 
+        //Data types: int, double, char, boolean, String, float
+        //int: whole numbers, double: decimal numbers, char: single character, boolean: true or false, String: text, float: decimal numbers with less precision
+
+        //single quotation marks are used for char, double quotation marks are used for String
+
+        //to rename a variable or change a recurring word in code use : select, right mouse click, 'change all occurances '
+
 
     }
 }
