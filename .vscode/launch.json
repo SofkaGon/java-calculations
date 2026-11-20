@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BaseConverterCalc",
+            "request": "launch",
+            "mainClass": "learnJava.BaseConverterCalc",
+            "projectName": "first project_e54f04fb"
+        },
+        {
+            "type": "java",
             "name": "PrimeFactors",
             "request": "launch",
             "mainClass": "assignment3.PrimeFactors",
