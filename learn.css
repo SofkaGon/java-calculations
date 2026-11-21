@@ -1,0 +1,38 @@
+/* learn.css - Learn Java page.
+   Structure only: sidebar beside the lesson on wide screens, stacked on narrow ones. */
+
+.learn-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 48em) {
+  .learn-layout {
+    grid-template-columns: 18rem 1fr;
+    align-items: start;
+  }
+}
+
+#lesson-view nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#lesson-search {
+  width: 100%;
+}
+
+#progress-bar {
+  width: 100%;
+}
+
+#other-pages ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}

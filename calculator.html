@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Java Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="calculator.css">
+  <script src="main.js" defer></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <h1 id="app-name">Java Calculator</h1>
+
+    <nav aria-label="On this page">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Calculators and functions</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#requirements">System requirements</a></li>
+        <li><a href="#install">Installation and usage</a></li>
+        <li><a href="#limits">Known limits</a></li>
+        <li><a href="#changelog">Changelog</a></li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <h2>About the application</h2>
+      <p id="app-intro"></p>
+      <h3>Purpose</h3>
+      <p id="app-purpose"></p>
+    </section>
+
+    <section id="features">
+      <h2>Calculators and functions</h2>
+      <label for="feature-search">Search calculators</label>
+      <input type="search" id="feature-search" placeholder="e.g. prime, loan, date">
+      <p id="feature-count" aria-live="polite"></p>
+      <div id="feature-list"></div>
+    </section>
+
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      <div id="screenshot-list"></div>
+    </section>
+
+    <section id="download">
+      <h2>Download</h2>
+      <p id="release-status" aria-live="polite">Loading release information…</p>
+      <dl id="release-info"></dl>
+      <p id="download-link-area"></p>
+
+      <h3>Official download source</h3>
+      <p>
+        The only official download location is the
+        <a id="releases-link" href="#">GitHub Releases page</a>
+        of this project. Do not use copies from other websites.
+      </p>
+
+      <h3>Verify your download</h3>
+      <p>Compare the SHA-256 checksum of the file you downloaded with the one shown above. If they differ, do not run the file.</p>
+      <ul>
+        <li>Windows (Command Prompt): <code>certutil -hashfile FILENAME SHA256</code></li>
+        <li>macOS / Linux: <code>shasum -a 256 FILENAME</code></li>
+      </ul>
+      <p>Hosting on GitHub does not by itself guarantee that a file is safe. A checksum only proves the file matches what the author published. Only run software from sources you trust.</p>
+    </section>
+
+    <section id="requirements">
+      <h2>System requirements</h2>
+      <ul id="requirements-list"></ul>
+      <h3>Get Java and JavaFX from the official sources</h3>
+      <p>JavaFX and Java are not included in the calculator download. Download them yourself from the official sites below and check the licence terms shown there.</p>
+      <ul id="get-java-list"></ul>
+    </section>
+
+    <section id="install">
+      <h2>Installation and usage</h2>
+      <ol id="install-list"></ol>
+      <p>Start command (Windows, Command Prompt):</p>
+      <pre><code id="launch-command"></code></pre>
+      <h3>Using the application</h3>
+      <ol id="usage-list"></ol>
+    </section>
+
+    <section id="limits">
+      <h2>Known limits</h2>
+      <div id="limits-list"></div>
+    </section>
+
+    <section id="changelog">
+      <h2>Changelog</h2>
+      <div id="changelog-list"></div>
+    </section>
+
+    <p><a href="learn.html">← Back to Learn Java</a></p>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

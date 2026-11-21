@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introduction to Java</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="intro.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <div class="page">
+      <div class="hero-window">
+
+        <div class="window-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="hero-content">
+
+          <h1>INTRODUCTION TO JAVA</h1>
+
+          <p>
+            Learn what Java is, how programs work,
+            and why millions of developers use it.
+          </p>
+
+        </div>
+
+      </div>
+
+      <nav class="contents-nav" aria-label="On this page">
+        <ul class="contents-grid">
+          <li><a href="#what">What is Java?</a></li>
+          <li><a href="#uses">What is Java used for?</a></li>
+          <li><a href="#traits">Main characteristics</a></li>
+          <li><a href="#why">Why learn Java?</a></li>
+          <li><a href="#oop">Object-Oriented Programming</a></li>
+          <li><a href="#how">How Java Runs</a></li>
+          <li><a href="#jvm">The JVM</a></li>
+        </ul>
+      </nav>
+
+      <section id="what" class="split-layout">
+
+        <div class="text-side">
+          <h2>What is Java?</h2>
+          <p>Java is a programming language: a way of writing instructions that a computer can follow. It was created in the 1990s and is still one of the most widely used languages in the world.</p>
+          <p>A Java program is written as plain text in a file ending in <code>.java</code>. Here is the smallest useful example:</p>
+          <pre><code>System.out.println("Hello World");</code></pre>
+          <p>This one line tells the computer to display the words <em>Hello World</em>.</p>
+          </div>
+          <div class="image-side">
+            <img src="images/java-coffee.png"
+                alt="Java logo">
+          </div>
+      </section>
+
+      <section id="uses">
+        <h2>What is Java used for?</h2>
+          <div class="use-grid">
+            <div class="use-card">
+              Desktop Applications
+            </div>
+            <div class="use-card">
+              Android Apps
+            </div>
+            <div class="use-card">
+              Games
+            </div>
+            <div class="use-card">
+              Web Servers
+            </div>
+            <div class="use-card">
+              Education
+            </div>
+          </div>
+      </section>
+
+      <section id="traits">
+        <h2>Main characteristics</h2>
+        <dl>
+          <dt>Object-oriented</dt>
+          <dd>Programs are organised into <em>classes</em> and <em>objects</em> (see below).</dd>
+          <dt>Platform independent</dt>
+          <dd>The same compiled program can run on Windows, macOS and Linux. This is often called "write once, run anywhere".</dd>
+          <dt>Statically typed</dt>
+          <dd>You must say what kind of data a variable holds (<code>int</code> for whole numbers, <code>String</code> for text). Many mistakes are caught before the program runs.</dd>
+          <dt>Compiled and interpreted</dt>
+          <dd>Your code is first compiled, then run by the Java Virtual Machine.</dd>
+          <dt>Automatic memory management</dt>
+          <dd>Java cleans up memory you are no longer using (garbage collection).</dd>
+          <dt>Large standard library</dt>
+          <dd>Ready-made tools for input, text, dates, collections, graphics and more, such as <code>Scanner</code> for reading user input.</dd>
+        </dl>
+      </section>
+
+      <section id="why">
+        <h2>Why learn Java?</h2>
+        <ul>
+          <li>It teaches core ideas (variables, conditions, loops, classes) that carry over to other languages.</li>
+          <li>Clear rules and strong error messages help beginners find mistakes.</li>
+          <li>It is in demand for jobs and used in many courses.</li>
+          <li>It has a huge community, documentation and free tools.</li>
+        </ul>
+      </section>
+
+      <section id="oop">
+        <h2>Introduction to object-oriented programming (OOP)</h2>
+        <p>OOP is a way of organising a program around <em>things</em>. A <strong>class</strong> is a blueprint; an <strong>object</strong> is something built from that blueprint.</p>
+        <p>Example: a <code>Rectangle</code> class describes what every rectangle has (a width and a height) and what it can do (calculate its area). Each rectangle you create is an object with its own width and height.</p>
+        <ul>
+          <li><strong>Class</strong>: the blueprint.</li>
+          <li><strong>Object</strong>: one thing made from the blueprint.</li>
+          <li><strong>Fields</strong>: the data an object holds.</li>
+          <li><strong>Methods</strong>: the actions an object can perform.</li>
+        </ul>
+        <p>Every Java program lives inside a class, even a very small one. You will meet this in the first lesson.</p>
+      </section>
+
+      <section id="how">
+        <h2>How Java code becomes a running program</h2>
+        <p>Computers do not understand Java text directly. It goes through these steps:</p>
+        <ol class="steps">
+          <li><strong>Write</strong> source code in a <code>.java</code> file, for example <code>Hello.java</code>.</li>
+          <li><strong>Compile</strong> it with the Java compiler (<code>javac</code>). It checks for errors and produces <em>bytecode</em> in a <code>.class</code> file.</li>
+          <li><strong>Run</strong> the bytecode with the Java Virtual Machine (<code>java</code>).</li>
+          <li>The JVM translates the bytecode into instructions for your computer, and the program runs.</li>
+        </ol>
+        <pre><code>Hello.java  --javac-->  Hello.class  --java (JVM)-->  program output</code></pre>
+        <p>In a terminal this looks like:</p>
+        <pre><code>javac Hello.java
+  java Hello</code></pre>
+        <p>Many people use an IDE (a code editor with Java support), which does these steps when you press "Run".</p>
+      </section>
+
+      <section id="jvm">
+        <h2>The JVM (Java Virtual Machine)</h2>
+        <p>The JVM is a program that runs Java bytecode. Think of it as a translator that sits between your Java program and the operating system.</p>
+        <ul>
+          <li>There is a different JVM for each operating system, but they all understand the same bytecode. That is why one compiled program works on many systems.</li>
+          <li>It manages memory and cleans up unused objects.</li>
+          <li>It checks bytecode before running it, which adds a layer of safety.</li>
+        </ul>
+        <p>You will usually see three names: the <strong>JVM</strong> (runs programs), the <strong>JRE</strong> (JVM plus libraries, for running) and the <strong>JDK</strong> (JRE plus the compiler and tools, for writing). To write Java you need the JDK.</p>
+      </section>
+
+      <section id="next">
+        <h2>Ready to start?</h2>
+        <p><a href="learn.html">Continue to Learn Java</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

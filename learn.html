@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Java</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="learn.css">
+  <script src="main.js" defer></script>
+  <script src="lessons.js" defer></script>
+  <script src="learn.js" defer></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <h1>Learn Java</h1>
+
+    <div class="learn-layout">
+      <aside id="lesson-sidebar" aria-label="Lessons">
+        <div id="progress-area">
+          <p id="progress-text">Progress: 0 of 0 lessons</p>
+          <progress id="progress-bar" value="0" max="1"></progress>
+          <p id="all-done" hidden>All lessons completed! Next: <a href="calculator.html">Java Calculator</a></p>
+        </div>
+
+        <label for="lesson-search">Search lessons</label>
+        <input type="search" id="lesson-search" placeholder="e.g. loop, Scanner, if">
+
+        <nav id="lesson-list" aria-label="Lesson list"></nav>
+
+        <button type="button" id="reset-progress">Reset progress</button>
+      </aside>
+
+      <article id="lesson-view" aria-live="polite">
+        <noscript>This page needs JavaScript to show the lessons.</noscript>
+      </article>
+    </div>
+
+    <nav id="other-pages" aria-label="Other pages">
+      <ul>
+        <li><a href="index.html">Introduction to Java</a></li>
+        <li><a href="calculator.html">Java Calculator</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>

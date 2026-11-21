@@ -1,0 +1,16 @@
+/* calculator.css - Calculator page. Structure only; add your own styling. */
+
+#release-info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 1rem;
+}
+
+#release-info dd {
+  margin: 0;
+  overflow-wrap: anywhere; /* long SHA-256 value wraps on small screens */
+}
+
+#screenshot-list figure {
+  margin: 1rem 0;
+}
